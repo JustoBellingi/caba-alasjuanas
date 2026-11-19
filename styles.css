@@ -309,3 +309,11 @@ svg { flex-shrink: 0; }
   .reveal { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
 }
+
+/* Crédito del desarrollador en el footer */
+.footer__bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px 24px; }
+.footer__credit a { color: var(--white); font-weight: 700; border-bottom: 1px solid rgba(255,255,255,.35); padding-bottom: 1px; transition: border-color .3s, color .3s; }
+.footer__credit a:hover { color: var(--accent-soft); border-color: var(--accent-soft); }
+.location .distances { margin-bottom: 0; }
+.footer__bottom { padding-right: 84px; }
+@media (max-width: 600px) { .footer__bottom { padding-right: 0; padding-bottom: 96px; } }
