@@ -1,18 +1,19 @@
-const WHATSAPP = '5492235537354';
-
 // ---- Navbar ----
 const nav = document.getElementById('nav');
 const toggle = document.getElementById('navToggle');
 const menu = document.getElementById('navMenu');
 const waFloat = document.querySelector('.wa-float');
+// En compu el inicio tiene fondo claro, así que la barra va siempre sólida
+const desktop = window.matchMedia('(min-width: 1081px)');
 
 const onScroll = () => {
   const y = window.scrollY;
-  nav.classList.toggle('is-scrolled', y > 40);
+  nav.classList.toggle('is-scrolled', y > 40 || desktop.matches);
   waFloat.classList.toggle('is-visible', y > window.innerHeight * 0.6);
 };
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
+desktop.addEventListener('change', onScroll);
 
 const setMenu = open => {
   nav.classList.toggle('is-open', open);
@@ -41,48 +42,14 @@ const io = new IntersectionObserver(entries => {
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-// ---- Consulta de disponibilidad por WhatsApp ----
-const form = document.getElementById('reservar');
-const llegada = document.getElementById('llegada');
-const salida = document.getElementById('salida');
-const pad = n => String(n).padStart(2, '0');
-const iso = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
-const today = new Date();
-llegada.min = iso(today);
-salida.min = iso(new Date(today.getTime() + 864e5));
-
-llegada.addEventListener('change', () => {
-  if (!llegada.value) return;
-  const next = new Date(llegada.value + 'T12:00');
-  next.setDate(next.getDate() + 1);
-  salida.min = iso(next);
-  if (!salida.value || salida.value <= llegada.value) salida.value = iso(next);
-});
-
-const fmt = v => v.split('-').reverse().join('/');
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  const n = document.getElementById('huespedes').value;
-  const personas = n === '6+' ? 'más de 5 personas' : `${n} ${n === '1' ? 'persona' : 'personas'}`;
-  const msg = `¡Hola! Quisiera consultar disponibilidad en Cabañas Las Juanas del ${fmt(llegada.value)} al ${fmt(salida.value)} para ${personas}.`;
-  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
-});
-
 // ---- Video: la sección aparece solo si el archivo existe ----
-const tour = document.getElementById('recorrido');
-const video = document.getElementById('tourVideo');
-const play = document.getElementById('tourPlay');
-video.addEventListener('loadedmetadata', () => {
+const tour = document.getElementById("recorrido");
+const video = document.getElementById("tourVideo");
+video.addEventListener("loadedmetadata", () => {
   tour.hidden = false;
-  video.parentElement.classList.toggle('is-portrait', video.videoHeight > video.videoWidth);
+  video.parentElement.classList.toggle("is-portrait", video.videoHeight > video.videoWidth);
   io.observe(tour);
 });
-play.addEventListener('click', () => {
-  video.controls = true;
-  video.play();
-  tour.classList.add('is-playing');
-});
-video.addEventListener('ended', () => tour.classList.remove('is-playing'));
 
 // ---- Galería con lightbox ----
 const imgs = [...document.querySelectorAll('.gallery__grid img')];

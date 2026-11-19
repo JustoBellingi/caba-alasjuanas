@@ -11,9 +11,6 @@
   <meta property="og:description" content="Cabañas alpinas a 300 metros del mar, en el barrio Mar y Sol.">
   <meta property="og:image" content="img/fachada.webp">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231c2226'/><path d='M50 18 82 82H18z' fill='none' stroke='%23c98b5e' stroke-width='6'/><path d='M50 50 62 82H38z' fill='%23c98b5e'/></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="img/fachada.webp">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
@@ -49,7 +46,7 @@
       <a href="#ubicacion">Ubicación</a>
       <a href="#contacto">Contacto</a>
     </nav>
-    <a href="#reservar" class="nav__cta">Reservar</a>
+    <a href="https://wa.me/5492235537354?text=Buenas!%20Quer%C3%ADa%20saber%20si%20hay%20disponibilidad%20en%20Caba%C3%B1as%20Las%20Juanas." target="_blank" rel="noopener" class="nav__cta js-wa">Reservar</a>
     <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
       <span></span><span></span>
     </button>
@@ -69,34 +66,14 @@
       <p class="hero__kicker"><span class="line"></span>Barrio Mar y Sol · Mar del Plata</p>
       <h1>Descanso a <em>300 metros</em><br>del mar</h1>
       <p class="hero__lead">Tres cabañas de estilo alpino para disfrutar Mar del Plata en familia, en pareja o con amigos.</p>
+      <div class="hero__actions">
+        <a class="btn btn--accent js-wa" href="https://wa.me/5492235537354?text=Buenas!%20Quer%C3%ADa%20saber%20si%20hay%20disponibilidad%20en%20Caba%C3%B1as%20Las%20Juanas." target="_blank" rel="noopener">
+          Consultar disponibilidad
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--outline" href="#cabanas">Conocé las cabañas</a>
+      </div>
     </div>
-
-    <form class="booking container" id="reservar" aria-label="Consultar disponibilidad">
-      <label class="booking__field">
-        <span>Llegada</span>
-        <input type="date" name="llegada" id="llegada" required>
-      </label>
-      <label class="booking__field">
-        <span>Salida</span>
-        <input type="date" name="salida" id="salida" required>
-      </label>
-      <label class="booking__field">
-        <span>Huéspedes</span>
-        <select name="huespedes" id="huespedes">
-          <option value="1">1 persona</option>
-          <option value="2" selected>2 personas</option>
-          <option value="3">3 personas</option>
-          <option value="4">4 personas</option>
-          <option value="5">5 personas</option>
-          <option value="6+">Más de 5</option>
-        </select>
-      </label>
-      <button type="submit" class="btn btn--accent booking__submit">
-        Consultar disponibilidad
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </button>
-      <p class="booking__note">Te respondemos por WhatsApp con disponibilidad y tarifa.</p>
-    </form>
   </section>
 
   <!-- INTRO -->
@@ -128,7 +105,7 @@
           <li><strong>Altillo con terraza</strong><span>Deck de madera en altura</span></li>
           <li><strong>Parrilla propia</strong><span>Mesa al aire libre bajo pérgola</span></li>
         </ul>
-        <a href="#reservar" class="link-arrow">Consultar fechas <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="https://wa.me/5492235537354?text=Buenas!%20Quer%C3%ADa%20saber%20si%20hay%20disponibilidad%20en%20Caba%C3%B1as%20Las%20Juanas." target="_blank" rel="noopener" class="link-arrow js-wa">Consultar fechas <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
   </section>
@@ -137,16 +114,13 @@
   <section class="tour" id="recorrido" hidden>
     <div class="container">
       <div class="tour__head reveal">
-        <p class="label label--light"><span>02</span> Recorrido</p>
+        <p class="label"><span>02</span> Recorrido</p>
         <h2>Conocé Las Juanas <em>por dentro</em></h2>
       </div>
       <div class="tour__player reveal">
-        <video id="tourVideo" preload="metadata" playsinline poster="img/living.webp">
+        <video id="tourVideo" poster="img/cartel.webp" preload="metadata" playsinline controls controlslist="nodownload" disablepictureinpicture>
           <source src="video/las-juanas.mp4" type="video/mp4">
         </video>
-        <button class="tour__play" id="tourPlay" aria-label="Reproducir video">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-        </button>
       </div>
     </div>
   </section>
@@ -206,12 +180,12 @@
         <a class="link-arrow" href="https://www.instagram.com/lasjuanashospedaje" target="_blank" rel="noopener">Más fotos en Instagram <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="gallery__grid">
-        <button class="g g--a" data-index="0"><img src="img/living.webp" alt="Living con sillón cama y techo de madera a la vista" loading="lazy"></button>
-        <button class="g g--b" data-index="1"><img src="img/dormitorio.webp" alt="Dormitorio en el altillo con salida a la terraza" loading="lazy"></button>
-        <button class="g g--c" data-index="2"><img src="img/parrilla.webp" alt="Parrilla de ladrillo y mesa de madera bajo pérgola" loading="lazy"></button>
-        <button class="g g--d" data-index="3"><img src="img/comedor.webp" alt="Comedor con mesa y escalera al altillo" loading="lazy"></button>
-        <button class="g g--e" data-index="4"><img src="img/bano.webp" alt="Baño con ducha y mampara de vidrio" loading="lazy"></button>
-        <button class="g g--f" data-index="5"><img src="img/cartel.webp" alt="Cartel de entrada de Cabañas Las Juanas" loading="lazy"></button>
+        <button class="g" data-index="0"><img src="img/living.webp" alt="Living con sillón cama y techo de madera a la vista" loading="lazy"></button>
+        <button class="g" data-index="1"><img src="img/dormitorio.webp" alt="Dormitorio en el altillo con salida a la terraza" loading="lazy"></button>
+        <button class="g" data-index="2"><img src="img/parrilla.webp" alt="Parrilla de ladrillo y mesa de madera bajo pérgola" loading="lazy"></button>
+        <button class="g" data-index="3"><img src="img/comedor.webp" alt="Comedor con mesa y escalera al altillo" loading="lazy"></button>
+        <button class="g" data-index="4"><img src="img/bano.webp" alt="Baño con ducha y mampara de vidrio" loading="lazy"></button>
+        <button class="g" data-index="5"><img src="img/cartel.webp" alt="Cartel de entrada de Cabañas Las Juanas" loading="lazy"></button>
       </div>
     </div>
   </section>
@@ -248,11 +222,10 @@
       <h2>Tu escapada a Mar del Plata<br><em>empieza acá</em></h2>
       <p>Escribinos y te pasamos disponibilidad y tarifas para tus fechas.</p>
       <div class="cta__actions">
-        <a class="btn btn--accent" href="https://wa.me/5492235537354?text=Hola!%20Quisiera%20consultar%20disponibilidad%20en%20Caba%C3%B1as%20Las%20Juanas" target="_blank" rel="noopener">
+        <a class="btn btn--accent js-wa" href="https://wa.me/5492235537354?text=Buenas!%20Quer%C3%ADa%20saber%20si%20hay%20disponibilidad%20en%20Caba%C3%B1as%20Las%20Juanas." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>
           Escribinos por WhatsApp
         </a>
-        <a class="btn btn--outline" href="tel:+5492235537354">223 553-7354</a>
       </div>
     </div>
   </section>
@@ -304,7 +277,7 @@
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/5492235537354?text=Hola!%20Quisiera%20consultar%20disponibilidad%20en%20Caba%C3%B1as%20Las%20Juanas" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+<a class="wa-float js-wa" href="https://wa.me/5492235537354?text=Buenas!%20Quer%C3%ADa%20saber%20si%20hay%20disponibilidad%20en%20Caba%C3%B1as%20Las%20Juanas." target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z" fill="currentColor"/></svg>
 </a>
 
