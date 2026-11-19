@@ -55,6 +55,29 @@ document.getElementById("tourCover").addEventListener("click", () => {
   video.play();
 });
 
+// ---- Carrusel de la galería (celular) ----
+const track = document.querySelector(".gallery__grid");
+const dotsBox = document.getElementById("galleryDots");
+const slides = [...track.querySelectorAll(".g")];
+const dots = slides.map((s, i) => {
+  const d = document.createElement("button");
+  d.setAttribute("aria-label", "Ver foto " + (i + 1));
+  d.addEventListener("click", () => track.scrollTo({ left: s.offsetLeft - (track.clientWidth - s.offsetWidth) / 2, behavior: "smooth" }));
+  dotsBox.appendChild(d);
+  return d;
+});
+const updateDots = () => {
+  const center = track.scrollLeft + track.clientWidth / 2;
+  let active = 0, best = Infinity;
+  slides.forEach((s, i) => {
+    const dist = Math.abs(s.offsetLeft - track.offsetLeft + s.offsetWidth / 2 - center);
+    if (dist < best) { best = dist; active = i; }
+  });
+  dots.forEach((d, i) => d.classList.toggle("is-active", i === active));
+};
+track.addEventListener("scroll", () => requestAnimationFrame(updateDots), { passive: true });
+updateDots();
+
 // ---- Galería con lightbox ----
 const imgs = [...document.querySelectorAll('.gallery__grid img')];
 const lb = document.getElementById('lightbox');
