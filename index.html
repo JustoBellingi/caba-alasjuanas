@@ -98,16 +98,41 @@
   </section>
 
   <!-- VIDEO (se muestra solo si existe video/las-juanas.mp4) -->
-  <section class="tour" id="recorrido" hidden>
-    <div class="container">
-      <div class="tour__head reveal">
+  <section class="section tour" id="recorrido" hidden>
+    <div class="container tour__grid">
+      <div class="tour__text reveal">
         <p class="label"><span>02</span> Recorrido</p>
-        <h2>Conocé Las Juanas <em>por dentro</em></h2>
+        <h2>Conocé Las Juanas por dentro</h2>
+        <p>Antes de reservar, mirá cómo son las cabañas y el predio. Un recorrido corto para que sepas exactamente lo que vas a encontrar.</p>
+        <ul class="tour__points">
+          <li>
+            <span class="tour__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></span>
+            Cabañas alpinas de madera y ladrillo
+          </li>
+          <li>
+            <span class="tour__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            Capacidad para hasta 5 personas
+          </li>
+          <li>
+            <span class="tour__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></span>
+            A 300 metros de la playa
+          </li>
+        </ul>
+        <a class="btn btn--accent" href="https://wa.me/5492235537354?text=Buenas!%20Quer%C3%ADa%20saber%20si%20hay%20disponibilidad%20en%20Caba%C3%B1as%20Las%20Juanas." target="_blank" rel="noopener">
+          Consultar disponibilidad
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
-      <div class="tour__player reveal">
-        <video id="tourVideo" poster="img/cartel.webp" preload="metadata" playsinline controls controlslist="nodownload" disablepictureinpicture>
-          <source src="video/las-juanas.mp4" type="video/mp4">
-        </video>
+      <div class="tour__media reveal">
+        <div class="tour__player">
+          <video id="tourVideo" preload="metadata" playsinline controls controlslist="nodownload" disablepictureinpicture>
+            <source src="video/las-juanas.mp4" type="video/mp4">
+          </video>
+          <button class="tour__cover" id="tourCover" aria-label="Reproducir video">
+            <img src="img/cartel.webp" alt="" loading="lazy">
+            <span class="tour__play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg></span>
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -117,39 +142,39 @@
     <div class="container">
       <div class="section__head reveal">
         <p class="label"><span>03</span> Comodidades</p>
-        <h2>Todo lo necesario <em>para tu estadía</em></h2>
+        <h2>Todo lo necesario para tu estadía</h2>
       </div>
       <ul class="amenities__grid">
-        <li class="reveal">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h16v10H4zM4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4M8 14h2M14 14h2"/></svg>
+        <li class="amenity reveal">
+          <span class="amenity__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h20M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8M4 8l16-4M8.86 6.78l-.45-1.81a2 2 0 0 1 1.45-2.43l1.94-.48a2 2 0 0 1 2.43 1.46l.45 1.8"/></svg></span>
           <h3>Cocina totalmente equipada</h3>
         </li>
-        <li class="reveal">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r=".8"/></svg>
+        <li class="amenity reveal">
+          <span class="amenity__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h.01M2 8.82a15 15 0 0 1 20 0M5 12.86a10 10 0 0 1 14 0M8.5 16.43a5 5 0 0 1 7 0"/></svg></span>
           <h3>WiFi</h3>
         </li>
-        <li class="reveal">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>
+        <li class="amenity reveal">
+          <span class="amenity__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M17 2l-5 5-5-5"/></svg></span>
           <h3>TV Smart</h3>
         </li>
-        <li class="reveal">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 15h18M3 18v2M21 18v2M6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/></svg>
+        <li class="amenity reveal">
+          <span class="amenity__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4M12 4v6M2 18h20"/></svg></span>
           <h3>Ropa de cama</h3>
         </li>
-        <li class="reveal">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10h18M5 10v10M19 10v10M3 14h18M12 3 4 10M12 3l8 7"/></svg>
+        <li class="amenity reveal">
+          <span class="amenity__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span>
           <h3>Terraza</h3>
         </li>
-        <li class="reveal">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11h16M6 11l1.5 9h9L18 11M9 7c0-1.5 1-1.5 1-3M14 7c0-1.5 1-1.5 1-3"/></svg>
+        <li class="amenity reveal">
+          <span class="amenity__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
           <h3>Parrilla</h3>
         </li>
-        <li class="reveal">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 3l9 8M5 9.5V21h14V9.5M10 21v-6h4v6"/></svg>
+        <li class="amenity reveal">
+          <span class="amenity__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3M2 16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0zM4 18v2M20 18v2"/></svg></span>
           <h3>Espacios cómodos y funcionales</h3>
         </li>
-        <li class="reveal">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 16c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2 20c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/><circle cx="12" cy="7.5" r="3"/></svg>
+        <li class="amenity reveal">
+          <span class="amenity__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></span>
           <h3>A 300 metros del mar</h3>
         </li>
       </ul>

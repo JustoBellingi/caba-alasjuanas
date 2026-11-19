@@ -50,6 +50,10 @@ video.addEventListener("loadedmetadata", () => {
   video.parentElement.classList.toggle("is-portrait", video.videoHeight > video.videoWidth);
   io.observe(tour);
 });
+document.getElementById("tourCover").addEventListener("click", () => {
+  video.parentElement.classList.add("is-playing");
+  video.play();
+});
 
 // ---- Galería con lightbox ----
 const imgs = [...document.querySelectorAll('.gallery__grid img')];
