@@ -72,7 +72,11 @@ form.addEventListener('submit', e => {
 const tour = document.getElementById('recorrido');
 const video = document.getElementById('tourVideo');
 const play = document.getElementById('tourPlay');
-video.addEventListener('loadedmetadata', () => { tour.hidden = false; io.observe(tour); });
+video.addEventListener('loadedmetadata', () => {
+  tour.hidden = false;
+  video.parentElement.classList.toggle('is-portrait', video.videoHeight > video.videoWidth);
+  io.observe(tour);
+});
 play.addEventListener('click', () => {
   video.controls = true;
   video.play();
