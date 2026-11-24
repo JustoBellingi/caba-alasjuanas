@@ -117,7 +117,7 @@ svg { flex-shrink: 0; }
   .nav__menu a { color: var(--ink) !important; font-size: 1.4rem; font-weight: 700; padding: 12px 0; border-bottom: 1px solid var(--line); }
   .nav__menu a::after { display: none; }
 }
-@media (max-width: 420px) { .brand__sub { display: none; } .nav__cta { display: none; } .nav__toggle { margin-left: auto; } }
+@media (max-width: 420px) { .brand__name { font-size: 1.2rem; } .nav__cta { display: none; } .nav__toggle { margin-left: auto; } }
 
 /* Hero */
 .hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; color: var(--white); padding-top: 120px; }
